@@ -1,0 +1,9 @@
+.NotePage button {
+    border: 1px solid grey;
+    padding: 15px;
+}
+
+.NotePage {
+    display: flex;
+    flex-direction: row;
+}

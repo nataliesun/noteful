@@ -1,0 +1,11 @@
+.SideBar {
+    flex: 1;
+    padding: 1em;
+}
+
+.SideBar button {
+    padding: 10px;
+    border: 1px solid black;
+    margin: 5px;
+
+}

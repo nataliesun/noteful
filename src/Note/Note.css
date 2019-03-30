@@ -1,0 +1,13 @@
+.Note {
+    border: 1px solid grey;
+    padding: 15px;
+}
+
+.note-info {
+    margin-top: 15px;
+}
+
+.Note button {
+    padding: 10px;
+    border: 1px solid black;
+}
