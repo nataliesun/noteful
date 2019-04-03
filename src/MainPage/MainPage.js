@@ -4,12 +4,11 @@ import NoteList from '../NoteList/NoteList';
 
 class MainPage extends Component {
     render() {
-        const { folders, notes } = this.props.data;
         return (
             <div className="MainPage">
                 <main>
-                    <SideBar folders={folders} />
-                    <NoteList notes={notes} />
+                    <SideBar/>
+                    <NoteList/>
                 </main>
             </div>
         );

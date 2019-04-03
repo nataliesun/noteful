@@ -2,36 +2,27 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import './SideBar.css';
 import Folder from '../Folder/Folder';
+import NotefulContext from '../NotefulContext';
 
 
 class SideBar extends Component {
+    static contextType = NotefulContext;
+
+  
     render() {
-        const folders = this.props.folders.map(folder => {
+        const { folders } = this.context.store;
+        const allFolders = folders.map(folder => {
             return <Folder key={folder.id} {...folder} />
         })
   
         return (
             <div className="SideBar">
-                {folders}
-                {!this.props.folders && <button type='button'>Add folder</button>}
-                {
-                    !!this.props.folderName 
-                        && <button 
-                                type='button'
-                                onClick={this.props.history.goBack}
-                            >
-                                Go back
-                        </button>
-                }
-                {!!this.props.folderName && <div>{this.props.folderName}</div>}
+                {allFolders}
+               <button type='button'>Add folder</button>
             </div>
         );
     }
 }
 
-SideBar.defaultProps = {
-    folders: [],
-    folderName: ''
-}
 
 export default withRouter(SideBar);

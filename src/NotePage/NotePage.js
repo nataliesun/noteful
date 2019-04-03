@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import Note from '../Note/Note';
 import './NotePage.css'
-import SideBar from '../SideBar/SideBar';
+import NotePageSideBar from '../NotePageSideBar/NotePageSideBar';
+
 
 class NotePage extends Component {
     render() {
 
         return (
             <div className="NotePage">
-                <SideBar folderName={this.props.folder.name} />
+                <NotePageSideBar/>
                 <div className="active-note">
-                    <Note key={this.props.note.id} {...this.props.note} />
-                    <div className="note-description">{this.props.note.content}</div>
+                    <Note/>
                 </div>
             </div>
         );

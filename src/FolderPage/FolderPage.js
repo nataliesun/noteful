@@ -7,15 +7,11 @@ import NoteList from '../NoteList/NoteList';
 
 class FolderPage extends Component {
 
-    render() {
-        const notes = this.props.notes.filter(n => {
-            return (n.folderId === this.props.path)
-        });
-        
+    render() {      
         return (
             <div className="FolderPage">
-                <SideBar folders={this.props.folders}/>
-                <NoteList notes={notes} />
+                <SideBar/>
+                <NoteList/>
             </div>
         );
     }
